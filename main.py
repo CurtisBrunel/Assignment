@@ -1,0 +1,87 @@
+#Forgotten Artifacts
+
+#Introduction
+
+import time
+
+#Shows text by the character
+def text_print(text, delay=0.06):
+    for char in text:
+        print(char, end='', flush=True)
+        time.sleep(delay)
+    print()
+
+#Prologue
+text_print("Are you ready for the experiment Agennt?")
+text_print("As ready as I'll every be doctor")
+text_print("Firing up the machine")
+text_print("Power is at 10%, How are you feeling?")
+text_print("Nothing abnormal")
+text_print("Good we will keep going. Power is at 50%")
+text_print("Still good")
+text_print("Power is at 80%")
+text_print("Somthing feels off, I'm going numb")
+text_print("Just a little more Agent")
+text_print("I don' think my body can take anymore of this")
+text_print("Power is at 95%, just 5% more")
+text_print("Power is at 100%")
+text_print("UHHHHHH.....")
+
+#Act 1
+text_print("ACT 1")
+text_print("Where am I? Who am I?")
+#Enter name
+name = input("What is your name? ")
+text_print("I remember my name is " + name)
+text_print("Now where am I?")
+text_print("Narrator - you look towards your surroundings and see a looming desert")
+#Where are you
+text_print("Oh this place must me...")
+text_print("1. Ancient Egypt")
+text_print("2. The beach")
+text_print("3. Mars")
+
+#Loop unitl correct choice is made
+while True:
+    choice = input("Enter 1, 2, or 3: ")
+    if choice == "1":
+        text_print("Ahh yes this was the place the doctor mentioned")
+        break #Correct choice and ends the loop
+    elif choice == "2":
+        text_print("No, I don't think that was quite what the doctor said")
+    elif choice == "3":
+        text_print("No, I don't think that was quite what the doctor said")
+    else:
+        text_print("Invalid input, Please enter 1, 2 or 3.")
+#Travel to the pyramid
+text_print("Narrator - you picked yourself up and started to walk ")
+text_print("Narrator you dont know where to go so you decided on a random direction ")
+
+#Direction
+text_print("Do you go:")
+text_print("1. North")
+text_print("2. East")
+text_print("3. West")
+text_print("4. South")
+#Chosing the direction
+while True:
+    choice = input("Enter 1, 2, 3 or 4: ")
+    if choice == "1":
+        text_print("Narrator - You travel North for a while but you see nothing in the distance.")
+        text_print("I think I should chose another direction.")
+    elif choice == "2":
+        text_print("Narrator - You travel East and come across an oasis, you take a break.")
+        text_print("I think I should chose another direction.")
+    elif choice == "3":
+        text_print("Narrator - You travel West and come across a small settlement.")
+        text_print("Narrator - you speak to one of the villages")
+        text_print("Do you know where the Pyramids are?")
+        text_print("Narrator - The villager points South")
+        text_print("Guess I'll head south")
+    elif choice == "4":
+        text_print("Narrator - You travel South and after a while you spot a Pyramid, just over the horizon.")
+        text_print("I found it!")
+        text_print("Narrator - The Pyramid stands tall, looking like it was built not long ago, the blocks have not been worn by time")
+        text_print("The time machine worked, I am really back in the past.")
+        break
+
