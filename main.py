@@ -84,4 +84,24 @@ while True:
         text_print("Narrator - The Pyramid stands tall, looking like it was built not long ago, the blocks have not been worn by time")
         text_print("The time machine worked, I am really back in the past.")
         break
+#Hodded man
+text_print("Narrator - You make your way over to the Pyramid")
+text_print("Narrator - As you stand at the entrance a hooded man walks up to you")
+text_print("You don't look like you are from here are you")
+text_print(name +" - No I am just a traveller")
+text_print("Hooded man - Is that so. Anyways, what brings you here.")
+text_print(name +" - Just some sight seeing.")
+text_print("Hooded man - We both no that is a lie. You are really here for the treasure")
+text_print(name +" - ....")
+text_print("Hooded man - Your silence tells me time right. I am not going to stop you but you best be careful")
+text_print(name +" - Why is that?")
+text_print("Hooded man - You didn't know about the rumors? The ones about the curse they put inside the Pyramid")
+text_print("Hooded man - It was to stop people like you from getting in")
+text_print(name +" - Well too far to back off now")
+text_print("Hooded man - Be my guess")
+text_print("Narrator - You look back into the dark entrance of the Pyramid and when you looked back to bid the man farewell he was gone")
+text_print("Narrator - You entered the Pyramid")
 
+#Dungeon 1 Pyramid
+
+#Inventory
