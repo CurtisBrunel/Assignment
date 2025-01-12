@@ -107,45 +107,45 @@ def text_print(text, delay=0.00):
 #Dungeon 1 Pyramid
 
 #Inventory
-inventory = ["Torch"]
-
-#shows inventory
-def inv():
-    if inventory:
-        print("You have: ")
-        for item in inventory:
-            print(f"- {item}")
-    else:
-        print("You don't have any items")
-
-#Walking through the Pyramid
-text_print("Narrator - You walk through the entrance corridor")
-text_print("It's getting quite dark")
-text_print("Narrator - You look into the the backpack that you took with you")
-text_print("Narrator - type inv to show inventory")
-openinv = input("> ").lower
-
-#Using torch
-if openinv == "inv":
-    inv()
-
-text_print("Would you like to use an item? (yes/no): ")
-while True:
-    useitem = input("> ").lower()
-    if useitem == "yes":
-        text_print("Narrator - You decide to use the Torch.")
-        text_print("Just want I needed a torch.")
-        text_print("Narrator - You use the torch, the corridor was lit up")
-        text_print("Narrator - You see a pressure plate and managed to avoid it")
-        text_print("Good thing I saw that. That could have been bad.")
-        break
-    elif useitem == "no":
-        text_print("You decide not to use the Torch.")
-        text_print("You keep travelling the corridor and step on a pressure plate")
-        text_print("You fall to your death.")
-        text_print("Game over, Please try again.")
-    else:
-        text_print("Invalid input please try again.")
+# inventory = ["Torch"]
+#
+# #shows inventory
+# def inv():
+#     if inventory:
+#         print("You have: ")
+#         for item in inventory:
+#             print(f"- {item}")
+#     else:
+#         print("You don't have any items")
+#
+# #Walking through the Pyramid
+# text_print("Narrator - You walk through the entrance corridor")
+# text_print("It's getting quite dark")
+# text_print("Narrator - You look into the the backpack that you took with you")
+# text_print("Narrator - type inv to show inventory")
+# openinv = input("> ").lower
+#
+# #Using torch
+# if openinv == "inv":
+#     inv()
+#
+# text_print("Would you like to use an item? (yes/no): ")
+# while True:
+#     useitem = input("> ").lower()
+#     if useitem == "yes":
+#         text_print("Narrator - You decide to use the Torch.")
+#         text_print("Just want I needed a torch.")
+#         text_print("Narrator - You use the torch, the corridor was lit up")
+#         text_print("Narrator - You see a pressure plate and managed to avoid it")
+#         text_print("Good thing I saw that. That could have been bad.")
+#         break
+#     elif useitem == "no":
+#         text_print("You decide not to use the Torch.")
+#         text_print("You keep travelling the corridor and step on a pressure plate")
+#         text_print("You fall to your death.")
+#         text_print("Game over, Please try again.")
+#     else:
+#         text_print("Invalid input please try again.")
 
 #Entering the kings chamber
 text_print("Narrator - you keep walking whilst avoiding obstacles.")
@@ -159,19 +159,43 @@ text_print("Narrator - you try to open the door but to no avail.")
 text_print("Guess I might need to press it in an order.")
 
 #Puzzle 1 Kings chamber door.
+correct_order = ["sun", "bird", "tree", "river"]
+
+#Check if sequence is correct
 def check_sequence(player_sequence):
     return player_sequence == correct_order
 
-#loop
+#Loop
 text_print("Narrator - you take a close look at the hieroglyphics.")
 text_print("These symbols they look like something.")
 text_print("The 4 hieroglyphics are 'tree, sun, river, bird'")
-text_print("What order should I press these in")
-text_print("The first one is:")
+text_print("And a clue. 'From the Heaven to the Earth and sea'")
+text_print("What should the order be? ")
 
+
+#Player keeps entering input unitl correct number of entries
 while True:
-    pressbutton = input("> ").lower()
-    if pressbutton == "sun":
+    text_print("What should the order be? ")
+#Reset player's sequence
+    player_sequence = []
+#Input the sequence
+    while len(player_sequence) < len(correct_order):
+# New line for each input
+        doorchoice = input("\nEnter your choice (tree/sun/river/bird): ").lower()
+
+        if doorchoice in ["sun", "bird", "tree", "river"]:
+            player_sequence.append(doorchoice)
+            text_print(f"You pressed the {doorchoice} hieroglyphic.")
+        else:
+            text_print("Invalid choice. Please try again.")
+
+    if check_sequence(player_sequence):
+        text_print("Narrator - The door opens as the symbols light up.")
+        break
+    else:
+        text_print("Narrator - The sequence is incorrect. And the hieroglyphics reset. Try again.")
+
+
 
 
 
