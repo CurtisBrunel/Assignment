@@ -4,6 +4,7 @@
 
 import time
 
+
 #Shows text by the character
 def text_print(text, delay=0.00):
     for char in text:
@@ -195,13 +196,53 @@ while True:
     else:
         text_print("Narrator - The sequence is incorrect. And the hieroglyphics reset. Try again.")
 
+#Enter the King Chamber
+text_print("Narrator - You open the door and see a sarcophagus")
+text_print("This must be the King's chamber")
+text_print("Time to grab the artifact.")
+text_print("Narrator - You remember the words of the hooded man at the entrance warning you to not go in")
 
+#Getting the map
+while True:
+    pickupitem = input("Do you open the sarcophagus? (yes/no): ").lower()
+    if pickupitem == "yes":
+        text_print("Narrator - You open the sarcophagus")
+        break
+    elif pickupitem == "no":
+        text_print("Narrator - You step away from the sarcophagus")
+        text_print("I have a bad feeling about this")
+        text_print("Narrator - As you step back the door behind you closes but the door opposite to the room opens")
+        text_print("What could that be?")
+        text_print("Narrator - As the door opens a stone creature emerges and lunges to attack you")
+        text_print("Narrator - You Died")
+        exit()
+    else:
+        text_print("Invalid input please try again.")
+#Looking at the mummy?
+text_print("Narrator - You look inside of the sarcophagus")
+text_print("Narrator - As you open it a large amount of dust spewed out")
+text_print("There is no artifact here, where could it be?")
+text_print("Narrator - You take a deeper look into the sarcophagus and see a skeleton holding a map")
+text_print("Narrator - You think to yourself for a second")
+text_print("Wait a second this is a skeleton not a mummy, this isn't the kings room this is a fake room.")
+text_print("Narrator - As you ponder on the thought you hear the door behind you close. But the opposite of the room opens")
+text_print("What could that be?")
+text_print("Narrator - As the door opens a stone creature emerges")
+#Hide
+while True:
+    hide1 = input("Do you hide in the sarcophagus? (yes/no): ").lower()
+    if hide1 == "yes":
+        text_print("Narrator - You jump in the sarcophagus next to the mummy")
+        break
+    elif hide1 == "no":
+        text_print("Narrator - You step away from the sarcophagus")
+        text_print("Narrator - The stone creature attacks you")
+        text_print("Narrator - You Died")
+        exit()
+    else:
+        text_print("Invalid input please try again.")
 
-
-
-
-
-
-
-
+#Getting to the new area
+text_print("Narrator - As you jump in the bottom of the sarcophagus breaks and you and the skeleton fall.")
+text_print("Ahh my head. Where am I now?")
 
