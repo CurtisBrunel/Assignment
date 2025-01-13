@@ -10,27 +10,27 @@ import time
 
 
 #Shows text by the character
-def text_print(text, delay=0.00):
+def text_print(text, delay=0.05):
     for char in text:
         print(char, end='', flush=True)
         time.sleep(delay)
     print()
 
 #Prologue
-text_print("Are you ready for the experiment Agennt?")
-text_print("As ready as I'll every be doctor")
-text_print("Firing up the machine")
-text_print("Power is at 10%, How are you feeling?")
-text_print("Nothing abnormal")
-text_print("Good we will keep going. Power is at 50%")
-text_print("Still good")
-text_print("Power is at 80%")
-text_print("Somthing feels off, I'm going numb")
-text_print("Just a little more Agent")
-text_print("I don' think my body can take anymore of this")
-text_print("Power is at 95%, just 5% more")
-text_print("Power is at 100%")
-text_print("UHHHHHH.....")
+text_print("Doctor - Are you ready for the experiment Agent?")
+text_print("Agent - As ready as I'll every be Doctor")
+text_print("Doctor - Firing up the machine")
+text_print("Doctor - Power is at 10%, How are you feeling?")
+text_print("Agent - Nothing abnormal")
+text_print("Doctor - Good we will keep going. Power is at 50%")
+text_print("Agent - Still good")
+text_print("Doctor - Power is at 80%")
+text_print("Agent - Somthing feels off, I'm going numb")
+text_print("Doctor - Just a little more Agent")
+text_print("Agent - I don' think my body can take anymore of this")
+text_print("Doctor - Power is at 95%, just 5% more")
+text_print("Doctor - Power is at 100%")
+text_print("Agent - UHHHHHH.....")
 
 #Act 1
 text_print("ACT 1")
